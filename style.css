@@ -1,0 +1,54 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+
+#navbar-content{
+    padding-left: 30%;
+}
+
+span.navbar-brand.mb-0.h1{
+    font-size: 30px;
+}
+
+#weather-dashboard{
+    margin: 80px 0px 0px 0px;
+}
+
+#search-section{
+   background-color: rgb(245, 245, 245); 
+   padding: 30px;
+}
+
+#forecast-section{
+    background-color: rgb(255, 254, 254);
+    
+   
+}
+
+#current-weather{
+    background-color: rgb(255, 254, 254);
+    height: 200px;
+    padding: 30px;
+}
+
+#day-one, #day-two, #day-three, #day-four, #day-five{
+    background-color: rgb(0, 105, 217);
+    border-radius: 1em;
+    height: 200px;
+    width: 140px;
+    margin: 15px;
+    
+}
+
+#five-day-cont{
+    padding: 30px;
+    background-color: rgb(255, 254, 254);
+
+}
+
+#current-weather-card{
+    height: 200px;
+}
+
