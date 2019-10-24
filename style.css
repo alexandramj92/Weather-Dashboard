@@ -29,7 +29,7 @@ span.navbar-brand.mb-0.h1{
 
 #current-weather{
     background-color: rgb(255, 254, 254);
-    height: 200px;
+    height: 300px;
     padding: 30px;
 }
 
@@ -45,10 +45,12 @@ span.navbar-brand.mb-0.h1{
 #five-day-cont{
     padding: 30px;
     background-color: rgb(255, 254, 254);
+    
 
 }
 
 #current-weather-card{
-    height: 200px;
+    height: 250px;
 }
+
 
