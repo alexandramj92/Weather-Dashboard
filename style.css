@@ -33,6 +33,12 @@ span.navbar-brand.mb-0.h1{
     padding: 30px;
 }
 
+#current-weather-input{
+    height: 300px;
+    width: 300px;
+    color: black;
+}
+
 #day-one, #day-two, #day-three, #day-four, #day-five{
     background-color: rgb(0, 105, 217);
     border-radius: 1em;
