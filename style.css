@@ -39,12 +39,13 @@ span.navbar-brand.mb-0.h1{
     color: black;
 }
 
-#day-one, #day-two, #day-three, #day-four, #day-five{
+.day-cont{
     background-color: rgb(0, 105, 217);
     border-radius: 1em;
-    height: 200px;
-    width: 140px;
+    height: 230px;
+    width: 180px;
     margin: 15px;
+    padding: 20px;
     
 }
 

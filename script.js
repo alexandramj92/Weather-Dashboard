@@ -12,7 +12,10 @@ $("#button-search").on("click", function(event){
 function displayWeatherConditions(){
     //Clear any existing data
     var currentWeather = $("#current-weather-input");
+    var FiveDayCont = $("#five-day-cont");
     currentWeather.empty();
+    FiveDayCont.empty();
+
 
     //Weather API for current weather
     var city = $("#city-input").val();
@@ -55,25 +58,66 @@ function displayWeatherConditions(){
                 currentWeather.append(uvIndex);
         });
 
-        var fivedayURL ="http://api.openweathermap.org/data/2.5/forecast?appid=91256f86e823d0a21a1f0c51b958e622&lat=" + lat + "&lon=" + lon;
+        var fivedayURL ="http://api.openweathermap.org/data/2.5/forecast?appid=91256f86e823d0a21a1f0c51b958e622&lat=" + lat + "&lon=" + lon + "&units=metric";
         $.ajax({
             url:fivedayURL,
             method: "GET"
         }).then(function(response){
-
-            // for (var i = 0; i< response.list.length; i++){
-
                 console.log(response);
-                var day = $("#day-" + i.toString());
+// Five Day Forecast
 
+                for (var i = 0; i<response.list.length; i++){
+                    var date = response.list[i].dt_txt;
+                    var dt = new Date(date);
 
-                var date = response.list[0].dt_txt;
-                var dt = new Date(date);
-                console.log(dt.toLocaleDateString());
-                console.log("date is " + date);
-            // }
-          
+                    var time = dt.toLocaleTimeString();
+                   
+                    if (time === "3:00:00 PM" ){
 
+                        var newDiv = $("<div>");
+                        newDiv.attr("class", "col-md-2");
+                        newDiv.attr("class", "day-cont");
+        
+                        var date = response.list[i].dt_txt;
+                        var dt = new Date(date);
+                        var dateTxt = dt.toLocaleDateString();
+                        var time = dt.toLocaleTimeString();
+                        console.log ("date");
+                        console.log(dt);
+                        console.log("time");
+                        console.log(time);
+        
+                        var dateDiv = $("<div>");
+                        dateDiv.text(dateTxt);
+                        newDiv.append(dateDiv);
+        
+                        var icon = response.list[i].weather[0].icon;
+                        var image = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+                        console.log(image);
+                        var imageDiv = $("<img>");
+                        imageDiv.attr("src", image);
+                        newDiv.append(imageDiv);
+                        
+                        var temp = response.list[i].main.temp;
+                        var tempDiv = $("<div>");
+                        tempDiv.text("Temperature: " + temp + " °C");
+                        newDiv.append(tempDiv);
+        
+                        var hum = response.list[i].main.humidity;
+                        var humDiv = $("<div>");
+                        humDiv.text("Humidity: " + hum +" %");
+                        newDiv.append(humDiv);
+        
+                        var FiveDayCont = $("#five-day-cont");
+                        FiveDayCont.append(newDiv);
+        
+                       
+        
+
+                    }
+                    
+                }
+               
         });
 
 
