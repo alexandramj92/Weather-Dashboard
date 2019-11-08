@@ -91,7 +91,7 @@ function displayWeatherConditions(){
         cityName.text(response.name + " (" + dateTxt + ")");
 
         var iconCur = response.weather[0].icon;
-        var imageCur = "https://cors-anywhere.herokuapp.com/https://openweathermap.org/img/wn/" + iconCur + "@2x.png";
+        var imageCur = "https://openweathermap.org/img/wn/" + iconCur + "@2x.png";
 
         console.log("Icon Curr");
         console.log(iconCur);
@@ -197,7 +197,7 @@ function displayWeatherConditions(){
                         newDiv.append(dateDiv);
         
                         var icon = response.list[i].weather[0].icon;
-                        var image = "https://cors-anywhere.herokuapp.com/https://openweathermap.org/img/wn/" + icon + "@2x.png";
+                        var image = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
                         console.log(image);
                         var imageDiv = $("<img>");
                         imageDiv.attr("src", image);
