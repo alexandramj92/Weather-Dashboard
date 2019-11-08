@@ -91,7 +91,7 @@ function displayWeatherConditions(){
         cityName.text(response.name + " (" + dateTxt + ")");
 
         var iconCur = response.weather[0].icon;
-        var imageCur = "http://openweathermap.org/img/wn/" + iconCur + "@2x.png";
+        var imageCur = "https://openweathermap.org/img/wn/" + iconCur + "@2x.png";
 
         console.log("Icon Curr");
         console.log(iconCur);
@@ -127,7 +127,7 @@ function displayWeatherConditions(){
 
         //UV API for current UV data for one location
 
-        var uvURL = "http://api.openweathermap.org/data/2.5/uvi?appid=91256f86e823d0a21a1f0c51b958e622&lat=" + lat + "&lon=" + lon;
+        var uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=91256f86e823d0a21a1f0c51b958e622&lat=" + lat + "&lon=" + lon;
         $.ajax({
             url: uvURL,
             method: "GET"
@@ -162,7 +162,7 @@ function displayWeatherConditions(){
 
         });
 
-        var fivedayURL ="http://api.openweathermap.org/data/2.5/forecast?appid=91256f86e823d0a21a1f0c51b958e622&lat=" + lat + "&lon=" + lon + "&units=metric";
+        var fivedayURL ="https://api.openweathermap.org/data/2.5/forecast?appid=91256f86e823d0a21a1f0c51b958e622&lat=" + lat + "&lon=" + lon + "&units=metric";
         $.ajax({
             url:fivedayURL,
             method: "GET"
@@ -197,7 +197,7 @@ function displayWeatherConditions(){
                         newDiv.append(dateDiv);
         
                         var icon = response.list[i].weather[0].icon;
-                        var image = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+                        var image = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
                         console.log(image);
                         var imageDiv = $("<img>");
                         imageDiv.attr("src", image);
