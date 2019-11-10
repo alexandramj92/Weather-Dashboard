@@ -4,7 +4,7 @@
 
 This application accesses the open weather API and allows the user to search for a city's current weather and five day forecast. 
 
-The application can be accessed [here.](https://alexandramj92.github.io/Portfolio/)
+The application can be accessed [here.](https://alexandramj92.github.io/weater-dashboard/)
 
 
 ## Usage
