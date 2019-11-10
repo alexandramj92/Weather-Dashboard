@@ -11,7 +11,7 @@ The application can be accessed [here.](https://alexandramj92.github.io/weater-d
 
 The application has an input field to the left and a placeholder that says "City Name" to indicate to the user that they need to input just a city name. 
 
-Below the search field, the past searches are listed and are limited to six. Future project features will include a clickable x next to each past field to allow a user to delete old searches that they are no longer interested in. 
+Below the search field, the past searches are listed. The past searches saved are limited to six and does not save a blank entry. Future project features will include a clickable x next to each past field to allow a user to delete old searches that they are no longer interested in. 
 
 The past searches are also clickable and will initiate the search for that specific city. 
 
