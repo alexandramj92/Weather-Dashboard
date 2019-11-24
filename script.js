@@ -24,17 +24,7 @@ $("#button-search").on("click", function(event){
     displayPastSearches();
 });
 
-$(".past-search-item").on("click", function(event){
-    event.preventDefault();
-    console.log("past search item clicked!");
-    city = $(this).text();
-  
-    console.log("past city");
-    console.log(city);
-    displayWeatherConditions();
 
-
-});
 
 
 
@@ -53,6 +43,18 @@ function displayPastSearches(){
         ul.append(li);
     }
     
+    $(".past-search-item").on("click", function(event){
+        debugger
+        event.preventDefault();
+        console.log("past search item clicked!");
+        city = $(this).text();
+      
+        console.log("past city");
+        console.log(city);
+        displayWeatherConditions();
+    
+    
+    });
 }
 
 
@@ -66,6 +68,7 @@ function init(){
 
 
 function displayWeatherConditions(){
+    debugger
     //Clear any existing data
     var currentWeather = $("#current-weather-input");
     var FiveDayCont = $("#five-day-cont");
